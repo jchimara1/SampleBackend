@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: lawnCare
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/lawnCare
+    username: lawnCare_justice
+    password: lawnCare_chimara
+
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
